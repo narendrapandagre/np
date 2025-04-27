@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm sticky-top" [ngClass]="{'dark': themeService.getTheme() | async, 'scrolled': isScrolled}">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" routerLink="/">
+      <img src="assets/images/np-port.png" alt="Narendra Pandagre" class="brand-logo me-2">
+      <span class="brand-text">Portfolio</span>
+    </a>
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()" [attr.aria-expanded]="isCollapsed ? 'false' : 'true'" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+        <span></span><span></span><span></span>
+      </span>
+    </button>
+    <div class="collapse navbar-collapse" [ngClass]="{'show': !isCollapsed}" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/skills" routerLinkActive="active">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/projects" routerLinkActive="active">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/resume" routerLinkActive="active">Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
+        </li>
+        <li class="nav-item">
+          <button (click)="themeService.toggleTheme()" class="theme-toggle-btn">
+            <span *ngIf="themeService.getTheme() | async">☀️</span>
+            <span *ngIf="!(themeService.getTheme() | async)">🌙</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

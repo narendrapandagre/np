@@ -1,1 +1,134 @@
-/* You can add global styles to this file, and also import other style files */
+/* src/styles.css */
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'); /* Google Fonts */
+/* Modern Typography and Base Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Light gradient for default theme */
+}
+
+/* Dark Mode */
+.dark {
+  background: linear-gradient(135deg, #1e1e2f 0%, #2a2a3e 100%); /* Dark gradient for dark mode */
+  color: #e0e0e0;
+}
+
+/* Improved Fade-In Animation */
+.animate-fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modern Navbar Styling */
+.navbar {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.dark .navbar {
+  background: var(--bs-primary-text-emphasis) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff !important;
+}
+
+.nav-link {
+  color: #ffffff !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #00ddeb !important; /* Modern cyan accent */
+}
+
+/* Modern Footer Styling */
+footer {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(10px);
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark footer {
+  background: var(--bs-primary-text-emphasis) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #b0b0b0;
+}
+/* Modern Gradient Button */
+/* Large Button */
+.btn-primary, .btn-secondary {
+  border: none;
+  border-radius: 12px;
+  padding: 1rem 3rem; /* Larger padding for bigger buttons */
+  font-size: 1.2rem; /* Larger font size */
+  font-weight: 600;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 221, 235, 0.3);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Small Button */
+.btn-primary.sm, .btn-secondary.sm {
+  padding: 0.5rem 1.5rem; /* Smaller padding for small buttons */
+  font-size: 0.9rem; /* Smaller font size */
+  box-shadow: 0 3px 8px rgba(0, 221, 235, 0.3);
+}
+
+/* Modern Gradient Button for Primary (Large) */
+.btn-primary {
+  background: linear-gradient(135deg, #00ddeb 0%, #3b82f6 100%);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 221, 235, 0.5);
+  background: linear-gradient(135deg, #3b82f6 0%, #00ddeb 100%);
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 8px rgba(0, 221, 235, 0.2);
+}
+
+/* Modern Gradient Button for Secondary (Large) */
+.btn-secondary {
+  background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 126, 95, 0.5);
+  background: linear-gradient(135deg, #feb47b 0%, #ff7e5f 100%);
+}
+
+.btn-secondary:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 8px rgba(255, 126, 95, 0.2);
+}

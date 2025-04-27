@@ -1,0 +1,123 @@
+/* Section Styling */
+section {
+    min-height: calc(100vh - 56px - 64px); /* Adjust for navbar and footer */
+    display: flex;
+    align-items: center;
+    padding: 3rem 1rem;
+  }
+  
+  /* Glassmorphism Form Container */
+  .contact-form-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .dark .contact-form-container {
+    background: rgba(30, 30, 47, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Heading */
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Form Styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  /* Neumorphic Form Fields */
+  .form-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #e0e0e0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-control {
+    background: #2a2a3e !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 1rem !important;
+    font-size: 1rem;
+    color: #e0e0e0 !important;
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.2),
+                inset -4px -4px 8px rgba(255, 255, 255, 0.05) !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .dark .form-control {
+    background: #1e1e2f !important;
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.3),
+                inset -4px -4px 8px rgba(255, 255, 255, 0.03) !important;
+  }
+  
+  .form-control:focus {
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2),
+                inset -2px -2px 4px rgba(255, 255, 255, 0.05),
+                0 0 0 3px rgba(0, 221, 235, 0.3) !important;
+    transform: scale(1.02);
+    background: #2a2a3e !important;
+  }
+  
+  textarea.form-control {
+    resize: none;
+    min-height: 120px;
+  }
+  
+  /* Error and Success Messages */
+  .text-danger,
+  .text-success {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+  
+  .text-danger {
+    color: #ff6b6b !important;
+  }
+  
+  .text-success {
+    color: #51cf66 !important;
+  }
+  
+  /* Modern Gradient Button */
+  .btn-primary {
+    background: linear-gradient(135deg, #00ddeb 0%, #3b82f6 100%);
+    border: none;
+    border-radius: 12px;
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    box_birth: 0px 0px 0px 0px;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 221, 235, 0.3);
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 221, 235, 0.5);
+    background: linear-gradient(135deg, #3b82f6 0%, #00ddeb 100%);
+  }
+  
+  .btn-primary:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 8px rgba(0, 221, 235, 0.2);
+  }

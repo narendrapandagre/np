@@ -1,0 +1,8 @@
+<section class="py-5">
+  <div class="container animate-fade-in">
+    <h2 class="display-5 fw-bold text-center mb-5">Projects</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <app-project-card *ngFor="let project of projects" [project]="project"></app-project-card>
+    </div>
+  </div>
+</section>

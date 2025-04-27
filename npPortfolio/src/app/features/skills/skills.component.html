@@ -1,0 +1,42 @@
+<section class="py-5 bg-light dark">
+  <div class="container animate-fade-in">
+    <h2 class="display-5 fw-bold text-center mb-5" data-aos="fade-up">Skills</h2>
+
+    <!-- Technical Skills -->
+    <div class="row mb-5" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-12">
+        <h3 class="h4 fw-semibold mb-3 text-primary">Technical Skills</h3>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div *ngFor="let techSkill of technicalSkills" class="col">
+            <div class="skill-card d-flex align-items-center h-100 p-3">
+              <i [class]="techSkill.icon + ' fa-2x text-primary me-3'"></i>
+              <div class="w-100">
+                <h5 class="mb-2 fw-semibold">{{ techSkill.name }}</h5>
+                <div class="progress">
+                  <div class="progress-bar bg-primary" role="progressbar"
+                    [style.width.%]="techSkill.proficiency"
+                    [attr.aria-valuenow]="techSkill.proficiency" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Soft Skills -->
+    <div class="row" data-aos="fade-up" data-aos-delay="200">
+      <div class="col-12">
+        <h3 class="h4 fw-semibold mb-3 text-primary">Soft Skills</h3>
+        <ul class="list-unstyled d-flex flex-wrap gap-3">
+          <li *ngFor="let softSkill of softSkills"
+            class="soft-skill-badge d-flex align-items-center gap-2">
+            <i [class]="softSkill.icon"></i> {{ softSkill.name }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
